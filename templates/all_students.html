@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Ismlar</title>
+</head>
+<body>
+    <h1>Talabalar ro'yxati</h1>
+    <br>
+    <hr>
+    <form method="get" action="/students/">
+        <input type="text" name="st_name">
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+    {% for student in students %}
+    <br>
+    <h2>{{student.id}}. <a href="/student/{{student.id}}/">{{student.ism}}</a> ({{student.kitob_soni}})</h2>
+    <a href="/student_ochir/{{student.id}}/"> <button>Delete<button></button></a>
+    {% endfor %}
+    <br>
+    <br>
+    <form method="post" action="/students/">{% csrf_token %}
+        <input type="text" name="st_name" placeholder="Ism">
+        <input type="number" name="st_books" placeholder="Kitob soni">
+        <button type="submit">Add</button>
+    </form>
+    <br>
+    <br>
+</body>
+</html>

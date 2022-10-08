@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ismlar</title>
+</head>
+<body>
+    <h1>Bitiruvchi talabalar ro'yxati</h1>
+    <br>
+    <hr>
+    {% for b in bitiruvchilar %}
+    <br>
+    <h2>{{b.id}}. {{b}}</h2>
+    {% endfor %}
+</body>
+</html>

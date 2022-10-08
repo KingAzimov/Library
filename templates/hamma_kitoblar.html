@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamma kitoblar</title>
+</head>
+<body>
+    <h1>Kitoblar</h1>
+    <br>
+    <hr>
+    <form method="get" action="/kitoblar/">
+        <input type="text" name="st_nom">
+        <button type="submit">Search</button>
+    </form>
+    {% for k in kitoblar %}
+    <br>
+    <h2>{{k}}</h2>
+    <hr>
+    {% endfor %}
+
+</body>
+</html>

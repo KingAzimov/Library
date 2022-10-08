@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamma recordlar</title>
+</head>
+<body>
+    <h1>Recordagi students</h1>
+    <br>
+    <hr>
+    <form method="get" action="/records/">
+        <input type="text" name="st_ism">
+        <button type="submit">Search</button>
+    </form>
+    {% for k in students %}
+    <br>
+    <h2>{{k}}</h2>
+    <hr>
+    {% endfor %}
+
+</body>
+</html>

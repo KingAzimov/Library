@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ismlar</title>
+</head>
+<body>
+    <h1>Kitobxon shovvozlar ro'yxati</h1>
+    <br>
+    <hr>
+    {% for k in kitoblilar %}
+    <br>
+    <h2>{{k}} ({{k.kitob_soni}})</h2>
+    {% endfor %}
+</body>
+</html>
